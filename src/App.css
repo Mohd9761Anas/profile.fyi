@@ -1,0 +1,250 @@
+.App {
+  text-align: center;
+}
+/* nav */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: rgb(56, 56, 136);
+  color: white;
+ 
+}
+
+.nav-brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-items {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-items div {
+  
+  color: White;
+  font-size: 18px;
+}
+
+.nav-items div:hover {
+  color: #007bff;
+}
+/* card */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.card-content {
+  margin-top: 12px;
+}
+
+.card-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #555;
+  margin: 8px 0;
+}
+
+.card-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 8px 0;
+}
+
+.card-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 12px;
+  transition: background-color 0.2s;
+}
+
+/* product list */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 5 columns, each taking up 1 fraction of the space */
+  gap: 15px; /* Adds space between the grid items */
+  padding: 15px; /* Optional padding around the grid */
+}
+@media (max-width: 768px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets or medium screens */
+  }
+  .card{
+    width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-list {
+    grid-template-columns: 1fr; /* 1 column on mobile devices */
+  }
+  .card{
+    width: 350px;
+  }
+}
+/* cartItem */
+.cart {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+
+.cart-items-container {
+  width: 60%; /* Cart items take up 50% of the page width */
+  padding-right: 20px; /* Space between the cart items and the empty section */
+  box-sizing: border-box; /* Ensures padding is included in the width */
+  margin-left: 30px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensures padding and border are included in the width */
+}
+
+.cart-item-image {
+  flex-shrink: 0;
+  width: 100px; /* Fixed width for images */
+  margin-right: 20px;
+}
+
+.cart-item-image img {
+  width: 100%; /* Ensure the image covers the allocated width */
+  height: auto;
+  border-radius: 5px;
+}
+
+.cart-item-details {
+  flex-grow: 1; /* Allow details to take up the remaining space */
+}
+
+.cart-item-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.cart-item-text {
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0;
+}
+
+.cart-item-price {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cart-item-remove {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.cart-item-remove:hover {
+  background-color: #e55347;
+}
+
+.cart-total {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+/* cart summary */
+.cart-summary-container {
+  width: 40%; /* Cart summary takes up the remaining 50% of the page width */
+  margin: 100px 0px 30px 30px;
+  box-sizing: border-box;
+}
+
+.cart-summary {
+ 
+  border-radius: 5px;
+  padding: 20px;
+  
+}
+
+.cart-summary h2 {
+  margin-bottom: 20px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.summary-label {
+  font-weight: bold;
+}
+
+.summary-value {
+  font-weight: normal;
+}
+
+.checkout-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 400px;
+  margin-top: 50px;
+}
+
+.checkout-button:hover {
+  background-color: #45a049;
+}
+
+
+@media (max-width: 768px) {
+  .cart {
+    flex-direction: column;
+  }
+  .checkout-button{
+    width: 200px;
+  }
+
+  .cart-items-container{
+    width: 80%;
+  }
+  .cart-summary-container{
+    width: 80%;
+  }
+}  
