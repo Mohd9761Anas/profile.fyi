@@ -9,7 +9,12 @@
   padding: 10px 30px;
   background-color: rgb(56, 56, 136);
   color: white;
- 
+  width: 100%; /* Ensure full width */
+  box-sizing: border-box; /* Include padding in the element's total width */
+  position: fixed; /* Make the navbar fixed at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it stays on top of other content */
 }
 
 .nav-brand {
